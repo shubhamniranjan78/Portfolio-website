@@ -6,43 +6,53 @@
     <title>Shubham Niranjan | DevOps & Automation Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body>
+<body class="landing-page"> <!-- Added a class to target this page specifically -->
+
+    <!-- We will keep your original navigation bar but style it to be more minimal -->
     <header>
         <nav>
             <div class="logo">Shubham.</div>
             <ul class="nav-links">
-                <li><a href="index.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="notes.html">Notes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero visible">
-            <div class="hero-content">
-                <h1>Shubham Niranjan</h1>
-                <h2 class="tagline">
-                    <span class="typing-effect"></span>
-                </h2>
-                <p class="bio">
-                    I’m a passionate DevOps & Cloud enthusiast specializing in automation, infrastructure as code, CI/CD pipelines, and cloud-native deployments.
-                </p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Hire Me</a>
-                    <a href="Shubham_Niranjan_Resume.pdf" class="btn btn-secondary" download>
-    <i class="fa-solid fa-download"></i> Download Resume
-</a>
+    <!-- This is the new main content structure -->
+    <main class="landing-container">
+        
+        <img src="profile.jpg" alt="Shubham Niranjan" class="profile-picture">
+        
+        <h1>Shubham Niranjan 👋</h1>
+        
+        <div class="social-links-landing">
+            <a href="https://github.com/shubhamniranjan78" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@shubhamniranjan3794/shorts" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com/in/shubham-niranjan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://hashnode.com/@Shubham78" target="_blank" title="Hashnode Blog"><i class="fa-solid fa-blog"></i></a>
+        </div>
+        
+        <div class="cta-buttons">
+            <a href="projects.html" class="cta-btn">View My Projects</a>
+            <a href="Shubham_Niranjan_Resume.pdf" class="cta-btn" download>Download Resume</a>
+            <a href="contact.html" class="cta-btn">Get In Touch</a>
+        </div>
 
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Shubham Niranjan.</p>
+    <footer class="landing-footer">
+        <p>Inwardly, we ought to be different in all respects, but our exterior should conform to society. - Seneca</p>
     </footer>
 
     <script src="script.js"></script>
