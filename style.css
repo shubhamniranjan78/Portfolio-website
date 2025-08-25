@@ -23,6 +23,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 section {
@@ -55,6 +56,7 @@ header {
     background: rgba(11, 17, 32, 0.8);
     backdrop-filter: blur(10px);
     z-index: 100;
+    transition: padding 0.3s ease;
 }
 
 nav {
@@ -86,6 +88,21 @@ nav {
     color: var(--secondary-color);
 }
 
+/* Hamburger Menu (Initially Hidden) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -105,7 +122,7 @@ nav {
     font-size: 1.5rem;
     color: var(--primary-color);
     margin: 10px 0 20px;
-    height: 30px; /* Reserve space for typing text */
+    height: 30px; 
 }
 
 .typing-effect::after {
@@ -123,12 +140,22 @@ nav {
     font-size: 1.1rem;
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
 .btn {
     padding: 12px 28px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .btn-primary {
@@ -144,14 +171,12 @@ nav {
 .btn-secondary {
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
-    margin-left: 15px;
 }
 
 .btn-secondary:hover {
     background-color: var(--secondary-color);
     color: var(--bg-color);
 }
-
 
 /* Skills Section */
 .skill-grid {
@@ -182,7 +207,7 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Projects Section */
+/* Projects & Services Section */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -213,6 +238,9 @@ nav {
 .project-card .tools {
     margin-top: auto;
     padding-top: 15px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
 }
 
 .project-card .tools span {
@@ -271,4 +299,104 @@ footer {
 
 footer .fa-heart {
     color: var(--primary-color);
+}
+
+
+/* ======================================= */
+/* ====== RESPONSIVE MEDIA QUERIES ====== */
+/* ======================================= */
+
+/* For Tablets and smaller screens */
+@media screen and (max-width: 992px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    header {
+        padding: 20px 5%;
+    }
+}
+
+
+/* For Mobile Phones */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        width: 60%;
+        max-width: 300px;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        gap: 50px;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger */
+    }
+
+    /* Animate Hamburger into an "X" */
+    .hamburger.toggle .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.toggle .line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.toggle .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+        height: 50px; /* Give more space for wrapping */
+    }
+
+    .bio {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+    .btn-secondary {
+        margin-left: 0;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
 }
