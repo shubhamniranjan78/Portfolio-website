@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shubham Niranjan</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Shubham.</div>
+            <ul class="nav-links">
+                           <ul class="nav-links">
+                               <li><a href="index.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="projects" class="projects visible">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Terraform Infra Setup</h3>
+                    <p>Built a complete and reusable AWS infrastructure including a VPC, public/private subnets, EC2 web servers, and a MySQL database using Terraform.</p>
+                    <div class="tools">
+                        <span>Terraform</span>
+                        <span>AWS</span>
+                    </div>
+                    <a href="https://github.com/shubhamniranjan78" target="_blank" class="github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Jenkins CI/CD Pipeline</h3>
+                    <p>Designed and implemented a full CI/CD pipeline with Jenkins that automatically builds, tests, and deploys a web application using Ansible and GitHub webhooks.</p>
+                    <div class="tools">
+                        <span>Jenkins</span>
+                        <span>GitHub</span>
+                        <span>Ansible</span>
+                    </div>
+                    <a href="https://github.com/shubhamniranjan78" target="_blank" class="github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Dockerized Web App</h3>
+                    <p>Containerized a Python-based web application with Docker, creating a lightweight and portable image. Orchestrated its deployment using Kubernetes for scalability.</p>
+                    <div class="tools">
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>Python</span>
+                    </div>
+                    <a href="https://github.com/shubhamniranjan78" target="_blank" class="github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+
+                <!-- Placeholder for Future Project -->
+                <div class="project-card placeholder-card">
+                    <h3>Future Project</h3>
+                    <p>More innovative projects are in the pipeline. Stay tuned for exciting updates on cloud automation and serverless architecture!</p>
+                    <div class="tools">
+                        <span>Coming Soon</span>
+                    </div>
+                     <a href="#" class="github-link" style="pointer-events: none; color: #666;"><i class="fab fa-github"></i> In Progress</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shubham Niranjan.</p>
+    </footer>
+
+    <!-- Add this new style to your style.css file for the placeholder card -->
+    <style>
+        .placeholder-card {
+            border-style: dashed;
+            opacity: 0.7;
+        }
+    </style>
+</body>
+</html>
